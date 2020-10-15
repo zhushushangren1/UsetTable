@@ -23,7 +23,6 @@ public class UserListServlet extends HttpServlet {
         //转发
         request.getRequestDispatcher("/list.jsp").forward(request,response);
     }
-
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         this.doPost(request, response);
     }

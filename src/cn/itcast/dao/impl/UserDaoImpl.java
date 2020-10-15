@@ -81,8 +81,8 @@ public class UserDaoImpl implements UserDao {
                 params.add("%"+value+"%");//存？条件的值
             }
         }
-        System.out.println(sb.toString());
-        System.out.println(params);
+//        System.out.println(sb.toString());
+//        System.out.println(params);
         return template.queryForObject(sb.toString(),Integer.class,params.toArray());
     }
 
@@ -101,8 +101,8 @@ public class UserDaoImpl implements UserDao {
                 params.add("%"+value+"%");
             }
         }
-        System.out.println(sb.toString());
-        System.out.println(params);
+//        System.out.println(sb.toString());
+//        System.out.println(params);
         //添加分页
         sb.append(" limit ?,?");
         params.add(start);
