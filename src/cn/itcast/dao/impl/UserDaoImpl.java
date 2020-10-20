@@ -43,7 +43,6 @@ public class UserDaoImpl implements UserDao {
         //执行sql
         template.update(sql,user.getName(),user.getGender(),user.getAge(),user.getAddress(),user.getQq(),user.getEmail());
     }
-
     @Override
     public void delete(int id) {
         String sql="delete from user where id=?";

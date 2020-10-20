@@ -34,7 +34,6 @@ public class LoginServlet extends HttpServlet {
         }
         //验证码正确
         Map<String, String[]> map = request.getParameterMap();
-
         //封装User对象
         User user=new User();
         try {

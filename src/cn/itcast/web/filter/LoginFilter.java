@@ -4,12 +4,14 @@ import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
+import java.lang.reflect.Proxy;
+
 //登录状态验证的过滤器
 @WebFilter("/*")
 public class LoginFilter implements Filter {
+    //注销方法
     public void destroy() {
     }
-
     public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain) throws ServletException, IOException {
         //判断是否是登陆相关的资源
         HttpServletRequest request=(HttpServletRequest) req;
@@ -32,9 +34,7 @@ public class LoginFilter implements Filter {
         }
         //        chain.doFilter(req, resp);
     }
-
+    //初始化方法
     public void init(FilterConfig config) throws ServletException {
-
     }
-
 }
